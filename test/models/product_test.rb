@@ -51,7 +51,7 @@ class ProductTest < ActiveSupport::TestCase
   	product = Product.new(title:       products(:ruby).title,
 					                description: "yyy",
 					                price:       1,
-					                image_url:   fred.gif)
+					                image_url:   "fred.gif")
   	assert product.invalid?
   	assert_equal [I18n.translate('errors.messages.taken')],
                  product.errors[:title]
